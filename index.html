@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hamburguer</title>
+</head>
+<style type="text/css">
+	.hamburguer, .cross{
+	  width: 30px;
+	  height: 30px;
+	  margin-top: 100px;
+	  
+	}
+
+	.hamburguer span,
+	.cross span{
+	  transition: .5s;
+	}
+
+
+	.hamburguer > span,
+	.cross > span{
+		display: block;
+	  height: 7px;
+	  background-color: #222;
+	  border-radius: 2px
+	}
+
+
+	.hamburguer > span{
+	  margin-top: 5px;
+	}
+
+	.cross  span.third-line {
+		display: none;
+	}
+	.cross span.first-line{
+	  transform: rotate(45deg) translateX(5px);
+	}
+
+	.cross span.second-line{
+	  transform: rotate(-45deg) translateX(5px);
+	}
+
+</style>
+<body>
+<div class="hamburguer" id="first">
+	<span class="first-line" ></span>
+	<span class="second-line"></span>
+	<span class="third-line"></span>
+</div>
+
+<div class="cross" id="second">
+	<span class="first-line"></span>
+	<span class="second-line"></span>
+	<span class="third-line"></span>
+</div>
+<button id="toggle">
+Toggle!
+</button>
+
+<script type="text/javascript">
+	var button = document.getElementById("toggle");
+	button.onclick = function(){
+	var first = document.getElementById("first");
+	var second = document.getElementById("second");
+	var aux = second.className;
+	second.className = first.className;
+	first.className = aux;
+}
+</script>
+</body>
+</html>
