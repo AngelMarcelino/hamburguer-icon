@@ -60,9 +60,10 @@ Toggle!
 
 <script type="text/javascript">
 	var button = document.getElementById("toggle");
-	button.onclick = function(){
 	var first = document.getElementById("first");
 	var second = document.getElementById("second");
+	button.onclick = function(){
+	
 	var aux = second.className;
 	second.className = first.className;
 	first.className = aux;
